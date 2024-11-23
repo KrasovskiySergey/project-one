@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 ul {
     list-style: none;
 }
@@ -20,11 +24,39 @@ ul {
 button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-5px);
 }
 
 .header {
     padding: 14px 0;
     background-color: #0a61f7;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;  
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
 }
 
 .menu-link {
@@ -36,6 +68,13 @@ button {
     color: #fff;
 }
 
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+}
+
 .main-title {
     font-weight: 500;
     font-size: 58px;
@@ -43,6 +82,12 @@ button {
     color: #363940;
     margin-bottom: 30px;
 }
+
+.main .text {
+    margin-bottom: 40px;
+    max-width: 380px;
+}
+
 .text {
     font-weight: 400;
     font-size: 16px;
@@ -63,13 +108,26 @@ button {
     color: #fff;
 }
 
+.main-img {
+    align-self: flex-end;
+}
+
 .rates-section {
     padding: 100px 0;
     background: #f9fafc;
 }
+
+.rates-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .rates-section .title {
     margin-bottom: 20px;
 }
+
 .rates-section .text {
     margin-bottom: 40px;
 }
@@ -141,6 +199,12 @@ th, td {
 .creat-account-section {
     padding: 100px 0;
 }
+
+.account-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .creat-account-section .title {
     margin-bottom: 50px;
 }
@@ -160,6 +224,19 @@ th, td {
 form {
     width: 100%;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="date"], select {
+    cursor: pointer;
 }
 
 input, select, fieldset, textarea {
@@ -183,6 +260,7 @@ input[type="text"] {
 input[type="email"], input[type="password"], input[type="date"], select {
     width: 230px;
     height: 50px;
+    flex-grow: 1;
 }
 
 fieldset {
